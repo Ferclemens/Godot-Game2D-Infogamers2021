@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://juego/Objetos/PowerUps/PowerUpSalto.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/Objetos/PowerUps/PowerUpVolar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://juego/Objetos/PowerUps/PlataformaTrampa.tscn" type="PackedScene" id=13]
+[ext_resource path="res://juego/Objetos/Portal.tscn" type="PackedScene" id=14]
 
 [node name="Nivel1" type="Node"]
 
@@ -44,11 +45,11 @@ position = Vector2( -1734.43, 190.527 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="PlataformaTrampa" parent="PlataformasNormales" instance=ExtResource( 13 )]
-position = Vector2( -495.9, -215.391 )
+position = Vector2( -485.9, -193.391 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="PlataformaTrampa2" parent="PlataformasNormales" instance=ExtResource( 13 )]
-position = Vector2( -757.528, -124.622 )
+position = Vector2( -769.528, -94.622 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="PlataformasGrandes" type="Node" parent="."]
@@ -104,10 +105,14 @@ scale = Vector2( 0.2, 1.2 )
 
 [node name="pinchos" parent="Enemigos" instance=ExtResource( 5 )]
 position = Vector2( 616.683, 464.589 )
+es_trampa = false
 
-[node name="pinchos2" parent="Enemigos" instance=ExtResource( 5 )]
-position = Vector2( -1418.82, -207.756 )
-es_trampa = true
+[node name="pinchosTrampa" parent="Enemigos" instance=ExtResource( 5 )]
+position = Vector2( -785.846, -342.342 )
+
+[node name="pinchos3" parent="Enemigos" instance=ExtResource( 5 )]
+position = Vector2( -1134.48, 2.78458 )
+es_trampa = false
 
 [node name="Pinchon" parent="Enemigos" instance=ExtResource( 6 )]
 position = Vector2( 468.355, 359.926 )
@@ -148,5 +153,5 @@ position = Vector2( 732.552, -361.519 )
 [node name="PowerUpVolar" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1184, -488 )
 
-[node name="pinchos" parent="." instance=ExtResource( 5 )]
-position = Vector2( -1134.48, 2.78458 )
+[node name="Portal" parent="." instance=ExtResource( 14 )]
+position = Vector2( -543.671, -305.815 )

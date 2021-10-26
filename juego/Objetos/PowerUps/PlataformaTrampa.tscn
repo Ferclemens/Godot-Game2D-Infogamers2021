@@ -90,8 +90,7 @@ anims/caer = SubResource( 2 )
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 0, -55 )
 stream = ExtResource( 3 )
-volume_db = -12.339
-pitch_scale = 2.22
+pitch_scale = 2.0
 bus = "SFX"
 
 [connection signal="body_entered" from="DetectorPersonaje" to="." method="_on_body_entered"]
