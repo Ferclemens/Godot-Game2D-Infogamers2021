@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DañoPersonaje.wav-53c8d2546982ff0e8bd16bc7671d5c86.sample"
+
+[deps]
+
+source_file="res://juego/recursos/Sfx/DañoPersonaje.wav"
+dest_files=[ "res://.import/DañoPersonaje.wav-53c8d2546982ff0e8bd16bc7671d5c86.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
