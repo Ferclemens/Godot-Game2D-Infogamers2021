@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SaltoPlataforma.wav-6f795baf0fa08d0a64afbaf2c6ac733a.sample"
+
+[deps]
+
+source_file="res://juego/recursos/Sfx/SaltoPlataforma.wav"
+dest_files=[ "res://.import/SaltoPlataforma.wav-6f795baf0fa08d0a64afbaf2c6ac733a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
