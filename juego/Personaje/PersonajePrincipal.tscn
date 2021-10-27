@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://juego/recursos/Players/bunny1_walk2.png" type="Texture" id=1]
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.gd" type="Script" id=2]
@@ -34,6 +34,22 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 } ]
+
+[sub_resource type="Animation" id=7]
+resource_name = "aclarar"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "default"
@@ -99,6 +115,34 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "oscurecer"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("CanvasLayer/ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CanvasLayer/ColorRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -202,7 +246,7 @@ bus = "SFX"
 position = Vector2( 0, -181.538 )
 current = true
 zoom = Vector2( 2, 2 )
-limit_bottom = 1000
+limit_bottom = 2000
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 
@@ -213,9 +257,25 @@ one_shot = true
 [node name="EnfriamientoPowerUpVolar" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/aclarar = SubResource( 7 )
 anims/default = SubResource( 4 )
 anims/entrar_portal = SubResource( 5 )
+anims/oscurecer = SubResource( 8 )
 anims/volar = SubResource( 6 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="timeout" from="EnfriamientoPowerUpSalto" to="." method="_on_EnfriamientoPowerUp_timeout"]
 [connection signal="timeout" from="EnfriamientoPowerUpVolar" to="." method="_on_EnfriamientoPowerUpVolar_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

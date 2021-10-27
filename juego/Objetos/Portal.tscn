@@ -6,11 +6,11 @@
 [ext_resource path="res://juego/recursos/Particles/portal_yellowParticle.png" type="Texture" id=4]
 [ext_resource path="res://juego/recursos/Particles/portal_orangeParticle.png" type="Texture" id=5]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=1]
 radius = 50.6148
 height = 32.5946
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "activado"
 length = 0.8
 loop = true
@@ -104,7 +104,7 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="ParticlesMaterial" id=5]
+[sub_resource type="ParticlesMaterial" id=4]
 emission_shape = 1
 emission_sphere_radius = 80.0
 flag_disable_z = true
@@ -112,7 +112,7 @@ gravity = Vector3( 0, 0, 0 )
 orbit_velocity = 0.2
 orbit_velocity_random = 0.5
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
 "loop": true,
@@ -126,34 +126,37 @@ z_as_relative = false
 collision_layer = 0
 collision_mask = 4
 script = ExtResource( 3 )
+proximo_nivel = "res://juego/Niveles/Nivel Temporal.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "desactivado"
-anims/activado = SubResource( 4 )
+anims/activado = SubResource( 2 )
 anims/desactivado = SubResource( 3 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
 scale = Vector2( 0.5, 0.5 )
+emitting = false
 amount = 50
 explosiveness = 0.2
-process_material = SubResource( 5 )
+process_material = SubResource( 4 )
 texture = ExtResource( 4 )
 
 [node name="Particles2D2" type="Particles2D" parent="."]
 scale = Vector2( 0.5, 0.5 )
+emitting = false
 amount = 50
 explosiveness = 0.2
-process_material = SubResource( 5 )
+process_material = SubResource( 4 )
 texture = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-modulate = Color( 0.92549, 0.768627, 0.396078, 1 )
+modulate = Color( 0.462745, 0.462745, 0.462745, 1 )
 position = Vector2( -0.333708, 0 )
 scale = Vector2( 0.4, 1.5 )
-frames = SubResource( 1 )
+frames = SubResource( 5 )
 frame = 1
 
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
