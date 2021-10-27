@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=2]
@@ -14,8 +14,11 @@
 [ext_resource path="res://juego/Objetos/PowerUps/PowerUpVolar.tscn" type="PackedScene" id=12]
 [ext_resource path="res://juego/Objetos/PowerUps/PlataformaTrampa.tscn" type="PackedScene" id=13]
 [ext_resource path="res://juego/Objetos/Portal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://juego/Objetos/ZanahoriaLlave.tscn" type="PackedScene" id=15]
+[ext_resource path="res://juego/Niveles/Nivel.gd" type="Script" id=16]
 
 [node name="Nivel1" type="Node"]
+script = ExtResource( 16 )
 
 [node name="PersonajePrincipal" parent="." instance=ExtResource( 1 )]
 position = Vector2( -264.699, -351.757 )
@@ -154,4 +157,15 @@ position = Vector2( 732.552, -361.519 )
 position = Vector2( 1184, -488 )
 
 [node name="Portal" parent="." instance=ExtResource( 14 )]
-position = Vector2( -543.671, -305.815 )
+position = Vector2( 151.02, -369.998 )
+
+[node name="Zanahorias" type="Node" parent="."]
+
+[node name="ZanahoriaLlave1" parent="Zanahorias" instance=ExtResource( 15 )]
+position = Vector2( -166.122, -343.57 )
+
+[node name="ZanahoriaLlave2" parent="Zanahorias" instance=ExtResource( 15 )]
+position = Vector2( -69.9551, -337.913 )
+
+[node name="ZanahoriaLlave3" parent="Zanahorias" instance=ExtResource( 15 )]
+position = Vector2( 31.8682, -335.085 )

@@ -2,7 +2,7 @@ extends Area2D
 
 export var es_trampa = false
 onready var detector_personaje = $Detector
-var color_trampa = Color.red
+var color_trampa = Color.brown
 onready var animacion = $AnimationPlayer
 
 func _ready():

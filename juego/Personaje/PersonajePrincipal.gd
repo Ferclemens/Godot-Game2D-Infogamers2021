@@ -3,6 +3,7 @@ extends KinematicBody2D
 var movimiento = Vector2.ZERO
 var fuerza_salto_original
 var aceleracion_caida_original
+var puede_moverse = true
 
 export var velocidad = Vector2(150.0,150.0)
 export var aceleracion_caida = 400
@@ -30,20 +31,22 @@ func _ready():
 	aceleracion_caida_original = aceleracion_caida
 
 func tomar_direccion():
-	var direccion = Input.get_action_strength("mover_derecha") - Input.get_action_strength("mover_izquierda")
-	if direccion == 0:
-		animacion.play("idle")
-	else:
-		if direccion<0:
-			animacion.flip_h = true
+	var direccion = 0
+	if puede_moverse:
+		direccion = Input.get_action_strength("mover_derecha") - Input.get_action_strength("mover_izquierda")
+		if direccion == 0:
+			animacion.play("idle")
 		else:
-			animacion.flip_h = false
-		animacion.play("run")
+			if direccion<0:
+				animacion.flip_h = true
+			else:
+				animacion.flip_h = false
+			animacion.play("run")
 	
 	return direccion
 
 func saltar():
-	if Input.is_action_just_pressed("salto") and is_on_floor():
+	if Input.is_action_just_pressed("salto") and is_on_floor() and puede_moverse:
 		audio_salto.play()
 		animacion.play("jump")
 		movimiento.y += fuerza_salto
@@ -92,6 +95,9 @@ func _on_EnfriamientoPowerUpVolar_timeout():
 	aceleracion_caida = aceleracion_caida_original
 	animacion_power_up_volar.play("default")
 
+func play_entrar_portal(posicion_portal):
+	puede_moverse = false
+	$AnimationPlayer.play("entrar_portal")
 
 
 

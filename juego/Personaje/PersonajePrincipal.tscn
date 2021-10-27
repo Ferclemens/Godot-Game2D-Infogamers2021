@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://juego/recursos/Players/bunny1_walk2.png" type="Texture" id=1]
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.gd" type="Script" id=2]
@@ -35,7 +35,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=4]
 resource_name = "default"
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:visible")
@@ -62,8 +62,46 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "volar"
+[sub_resource type="Animation" id=5]
+resource_name = "entrar_portal"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AnimatedSprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimatedSprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.04419, 1.03315 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:rotation_degrees")
@@ -175,8 +213,9 @@ one_shot = true
 [node name="EnfriamientoPowerUpVolar" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/default = SubResource( 5 )
-anims/volar = SubResource( 4 )
+anims/default = SubResource( 4 )
+anims/entrar_portal = SubResource( 5 )
+anims/volar = SubResource( 6 )
 
 [connection signal="timeout" from="EnfriamientoPowerUpSalto" to="." method="_on_EnfriamientoPowerUp_timeout"]
 [connection signal="timeout" from="EnfriamientoPowerUpVolar" to="." method="_on_EnfriamientoPowerUpVolar_timeout"]

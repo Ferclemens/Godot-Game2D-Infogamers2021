@@ -7,37 +7,13 @@
 [sub_resource type="Animation" id=1]
 resource_name = "caer"
 length = 0.6
-tracks/0/type = "value"
-tracks/0/path = NodePath("../pinchos/Sprite:position")
+tracks/0/type = "audio"
+tracks/0/path = NodePath("../pinchos/AudioStreamPlayer")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, -19.0273 ), Vector2( -10, -19.027 ), Vector2( 10, -19.027 ), Vector2( 0, -19.027 ), Vector2( 0, -250 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("../pinchos/Colisionador:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -230 ) ]
-}
-tracks/2/type = "audio"
-tracks/2/path = NodePath("../pinchos/AudioStreamPlayer")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "clips": [ {
 "end_offset": 0.0,
 "start_offset": 0.0,
@@ -53,19 +29,43 @@ tracks/2/keys = {
 } ],
 "times": PoolRealArray( 0.1, 0.2, 0.4 )
 }
-tracks/3/type = "method"
-tracks/3/path = NodePath(".")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
 "method": "queue_free"
 } ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -20 ), Vector2( 10, -20 ), Vector2( -10, -20 ), Vector2( 0, -20 ), Vector2( 0, -250 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Colisionador:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -230 ) ]
 }
 
 [node name="pinchos" type="Area2D"]
@@ -78,7 +78,7 @@ es_trampa = true
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.713726, 0.521569, 0.0980392, 1 )
-position = Vector2( 0, -19.0273 )
+position = Vector2( 0, -20 )
 scale = Vector2( 0.6, 0.6 )
 z_index = 30
 z_as_relative = false
