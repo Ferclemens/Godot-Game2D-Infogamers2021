@@ -16,5 +16,8 @@ func _on_BotonContinuar_pressed():
 	visible = false
 
 
+
+
+
 func _on_BotonMenuPrincipal_pressed():
-	get_tree().change_scene(escena)
+	get_tree()
