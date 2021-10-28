@@ -13,7 +13,7 @@ func _ready():
 
 func _process(delta):
 	if detector_personaje.is_colliding():
-		detector_personaje.set_deferred("enabled", false)
+		detector_personaje.set_deferred("enable", false)
 		animacion.play("caer")
 
 func _on_body_entered(body):

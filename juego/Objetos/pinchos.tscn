@@ -50,10 +50,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -19.0273 ), Vector2( -15, -19.027 ), Vector2( 15, -19.027 ), Vector2( 0, -19.0273 ), Vector2( 0, -270 ) ]
+"values": [ Vector2( 0, -20 ), Vector2( 10, -20 ), Vector2( -10, -20 ), Vector2( 0, -20 ), Vector2( 0, -250 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Colisionador:position")
@@ -65,7 +65,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -250 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -230 ) ]
 }
 
 [node name="pinchos" type="Area2D"]
@@ -78,7 +78,7 @@ es_trampa = true
 
 [node name="Sprite" type="Sprite" parent="."]
 modulate = Color( 0.713726, 0.521569, 0.0980392, 1 )
-position = Vector2( 0, -19.0273 )
+position = Vector2( 0, -20 )
 scale = Vector2( 0.6, 0.6 )
 z_index = 30
 z_as_relative = false
@@ -89,9 +89,7 @@ modulate = Color( 0.741176, 0.211765, 0.211765, 1 )
 polygon = PoolVector2Array( -22.5808, -4.13785, 24.6662, -3.50789, 18.9966, -26.1865, -17.5411, -26.1865 )
 
 [node name="Detector" type="RayCast2D" parent="."]
-z_index = 30
-z_as_relative = false
-cast_to = Vector2( 0, -250 )
+cast_to = Vector2( 0, -200 )
 collision_mask = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -99,6 +97,5 @@ anims/caer = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-bus = "SFX"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

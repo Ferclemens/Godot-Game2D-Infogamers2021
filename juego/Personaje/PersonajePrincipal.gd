@@ -3,6 +3,7 @@ extends KinematicBody2D
 var movimiento = Vector2.ZERO
 var fuerza_salto_original
 var aceleracion_caida_original
+var puede_moverse = true
 
 export var velocidad = Vector2(150.0,150.0)
 export var aceleracion_caida = 400
@@ -15,7 +16,7 @@ onready var audio_salto = $audio_jump
 onready var camara = $Camera2D
 onready var enfriamiento_power_up_saltar = $EnfriamientoPowerUpSalto
 onready var enfriamiento_power_up_volar = $EnfriamientoPowerUpVolar
-onready var animacion_power_up_volar = $AnimationPlayer
+onready var animacion_personaje = $AnimationPlayer
  
 func _physics_process(delta):
 	movimiento.x = velocidad.x * tomar_direccion()
@@ -26,24 +27,27 @@ func _physics_process(delta):
 	caida_al_vacio()
 
 func _ready():
+	animacion_personaje.play("aclarar")
 	fuerza_salto_original = fuerza_salto
 	aceleracion_caida_original = aceleracion_caida
 
 func tomar_direccion():
-	var direccion = Input.get_action_strength("mover_derecha") - Input.get_action_strength("mover_izquierda")
-	if direccion == 0:
-		animacion.play("idle")
-	else:
-		if direccion<0:
-			animacion.flip_h = true
+	var direccion = 0
+	if puede_moverse:
+		direccion = Input.get_action_strength("mover_derecha") - Input.get_action_strength("mover_izquierda")
+		if direccion == 0:
+			animacion.play("idle")
 		else:
-			animacion.flip_h = false
-		animacion.play("run")
+			if direccion<0:
+				animacion.flip_h = true
+			else:
+				animacion.flip_h = false
+			animacion.play("run")
 	
 	return direccion
 
 func saltar():
-	if Input.is_action_just_pressed("salto") and is_on_floor():
+	if Input.is_action_just_pressed("salto") and is_on_floor() and puede_moverse:
 		audio_salto.play()
 		animacion.play("jump")
 		movimiento.y += fuerza_salto
@@ -60,7 +64,7 @@ func saltar_de_power_up_volar():
 
 func volar():
 	saltar_de_power_up_volar()
-	animacion_power_up_volar.play("volar")
+	animacion_personaje.play("volar")
 	enfriamiento_power_up_volar.start()
 	aceleracion_caida = aceleracion_caida_power_up
 
@@ -79,6 +83,7 @@ func caida_al_vacio():
 		respawn()
 
 func respawn():
+	animacion_personaje.play("oscurecer")
 	get_tree().reload_current_scene()
 
 func impulsar():
@@ -90,9 +95,28 @@ func _on_EnfriamientoPowerUp_timeout():
 	
 func _on_EnfriamientoPowerUpVolar_timeout():
 	aceleracion_caida = aceleracion_caida_original
-	animacion_power_up_volar.play("default")
+	animacion_personaje.play("default")
+
+func play_entrar_portal(posicion_portal):
+	puede_moverse = false
+	$AnimationPlayer.play("entrar_portal")
+	$Tween.interpolate_property(
+		self,
+		"global_position",
+		global_position,
+		posicion_portal,
+		0.8,
+		Tween.TRANS_LINEAR,
+		Tween.EASE_IN_OUT
+		)
+		
+	$Tween.start()
 
 
 
 
 
+
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "entrar_portal":
+		animacion_personaje.play("oscurecer")

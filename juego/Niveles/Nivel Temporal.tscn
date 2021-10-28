@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=2]
+
+[node name="Nivel Temporal" type="Node"]
+
+[node name="PersonajePrincipal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 25.2268, -213.587 )
+collision_layer = 4
+collision_mask = 58
+
+[node name="Plataforma" parent="." instance=ExtResource( 1 )]
+position = Vector2( -6.72717, 58.8627 )
