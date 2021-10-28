@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=2]
@@ -20,9 +20,14 @@
 [ext_resource path="res://juego/recursos/Background/bg_layer2.png" type="Texture" id=18]
 [ext_resource path="res://juego/recursos/Background/bg_layer3.png" type="Texture" id=19]
 [ext_resource path="res://juego/recursos/Background/bg_layer4.png" type="Texture" id=20]
+[ext_resource path="res://juego/Menus/MenuPausa.tscn" type="PackedScene" id=21]
 
 [node name="Nivel1" type="Node"]
 script = ExtResource( 16 )
+
+[node name="CapaFrente" type="CanvasLayer" parent="."]
+
+[node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 21 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -68,15 +73,17 @@ modulate = Color( 0.803922, 0.917647, 0.772549, 1 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesCercanas"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 28.6055
+margin_top = 22.7785
+margin_right = 2076.61
+margin_bottom = 2070.78
 texture = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PersonajePrincipal" parent="." instance=ExtResource( 1 )]
-position = Vector2( -415.682, 583.264 )
+position = Vector2( -225.409, 488.127 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 27
