@@ -83,8 +83,10 @@ func caida_al_vacio():
 		respawn()
 
 func respawn():
+	DatosPlayer.restar_vidas()
 	animacion_personaje.play("oscurecer")
-	get_tree().reload_current_scene()
+	if DatosPlayer.vidas != 0:
+		get_tree().reload_current_scene()
 
 func impulsar():
 	movimiento.y = impulso
