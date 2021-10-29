@@ -83,7 +83,10 @@ func caida_al_vacio():
 		respawn()
 
 func respawn():
+<<<<<<< HEAD
 	DatosPlayer
+=======
+>>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
 	animacion_personaje.play("oscurecer")
 	get_tree().reload_current_scene()
 
