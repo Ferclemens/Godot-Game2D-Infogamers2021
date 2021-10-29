@@ -35,7 +35,7 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 resource_name = "aclarar"
 length = 0.5
 tracks/0/type = "value"
@@ -48,11 +48,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "default"
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:visible")
 tracks/0/interp = 1
@@ -78,8 +77,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "entrar_portal"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:rotation_degrees")
 tracks/0/interp = 1
@@ -117,7 +115,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "oscurecer"
 length = 0.5
 tracks/0/type = "value"
@@ -142,10 +140,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:rotation_degrees")
@@ -257,11 +255,11 @@ one_shot = true
 [node name="EnfriamientoPowerUpVolar" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/aclarar = SubResource( 7 )
-anims/default = SubResource( 4 )
-anims/entrar_portal = SubResource( 5 )
-anims/oscurecer = SubResource( 8 )
-anims/volar = SubResource( 6 )
+anims/aclarar = SubResource( 9 )
+anims/default = SubResource( 10 )
+anims/entrar_portal = SubResource( 11 )
+anims/oscurecer = SubResource( 7 )
+anims/volar = SubResource( 8 )
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -269,6 +267,7 @@ anims/volar = SubResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 visible = false
+modulate = Color( 0, 0, 0, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )

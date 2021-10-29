@@ -1,6 +1,6 @@
 extends Control
 
-export var escena = "res://juego/Menus/MenuPrincipal.tscn"
+export var ruta_boton_menu = "res://juego/Menus/MenuPrincipal.tscn"
 
 func _ready():
 	visible = false
@@ -20,4 +20,5 @@ func _on_BotonContinuar_pressed():
 
 
 func _on_BotonMenuPrincipal_pressed():
-	get_tree()
+	get_tree().paused = false
+	get_tree().change_scene(ruta_boton_menu)
