@@ -81,18 +81,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BotonContinuar" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_right = 355.0
-margin_bottom = 134.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
-
 [node name="BotonMenuPrincipal" parent="VBoxContainer" instance=ExtResource( 1 )]
-margin_top = 138.0
 margin_right = 355.0
-margin_bottom = 272.0
+margin_bottom = 203.0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
@@ -100,7 +91,7 @@ custom_fonts/font = SubResource( 4 )
 text = "Menu Principal"
 
 [node name="BotonSalir" type="Button" parent="VBoxContainer"]
-margin_top = 276.0
+margin_top = 207.0
 margin_right = 355.0
 margin_bottom = 410.0
 size_flags_vertical = 3

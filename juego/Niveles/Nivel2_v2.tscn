@@ -24,7 +24,7 @@
 
 [node name="Nivel2_v2" type="Node"]
 script = ExtResource( 18 )
-nivel_actual = "res://juego/Niveles/Nivel3_v2.tscn"
+nivel_actual = "res://juego/Niveles/Nivel2_v2.tscn"
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
@@ -399,7 +399,7 @@ position = Vector2( 1167.72, 1151.86 )
 
 [node name="Portal" parent="." instance=ExtResource( 17 )]
 position = Vector2( 3985.79, 858.757 )
-proximo_nivel = "res://juego/Menus/MenuVictoria.tscn"
+proximo_nivel = "res://juego/Niveles/Nivel3_v2.tscn"
 
 [node name="Zanahorias" type="Node" parent="."]
 
