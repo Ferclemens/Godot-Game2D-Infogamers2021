@@ -1,11 +1,19 @@
 extends Control
 
 onready var etiqueta_vidas = $ContenedorVidas/Cantidad
+onready var etiqueta_monedas_oro = $ContenedorMonedasOro/Cantidad
+onready var etiqueta_monedas_plata = $ContenedorMonedasPlata/Cantidad
+onready var etiqueta_monedas_bronce = $ContenedorMonedasBronce/Cantidad
+onready var etiqueta_llaves_zanahorias = $ContenedorZanahorias/Cantidad
 
 
 func _ready():
 	DatosPlayer.connect("actualizar_datos",self,"actualizar_hud")
-	actualizar_hud_vidas()
+	actualizar_hud()
 
-func actualizar_hud_vidas():
+func actualizar_hud():
 	etiqueta_vidas.text = "%s" %DatosPlayer.vidas
+	etiqueta_monedas_oro.text = "%s" %DatosPlayer.monedas_oro
+	etiqueta_monedas_plata.text = "%s" %DatosPlayer.monedas_plata
+	etiqueta_monedas_bronce.text = "%s" %DatosPlayer.monedas_bronce
+	etiqueta_llaves_zanahorias.text = "%s" %DatosPlayer.llaves

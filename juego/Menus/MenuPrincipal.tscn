@@ -182,6 +182,7 @@ motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 2048, 2048 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxFondo"]
+self_modulate = Color( 0.537255, 0.721569, 0.8, 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 7 )

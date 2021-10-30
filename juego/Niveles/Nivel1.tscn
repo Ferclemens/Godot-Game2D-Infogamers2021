@@ -25,12 +25,13 @@
 
 [node name="Nivel1" type="Node"]
 script = ExtResource( 16 )
+nivel_actual = "res://juego/Niveles/Nivel1.tscn"
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
-[node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 21 )]
-
 [node name="HUD" parent="CapaFrente" instance=ExtResource( 22 )]
+
+[node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 21 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -39,6 +40,7 @@ motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 2048, 2048 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxFondo"]
+self_modulate = Color( 0.537255, 0.721569, 0.8, 1 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 17 )
@@ -76,17 +78,17 @@ modulate = Color( 0.803922, 0.917647, 0.772549, 1 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesCercanas"]
-margin_left = 28.6055
-margin_top = 22.7785
-margin_right = 2076.61
-margin_bottom = 2070.78
+margin_left = -4.48985
+margin_top = -2.24493
+margin_right = 2043.51
+margin_bottom = 2045.76
 texture = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PersonajePrincipal" parent="." instance=ExtResource( 1 )]
-position = Vector2( -225.409, 488.127 )
+position = Vector2( 1189.34, 434.673 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 27
@@ -97,11 +99,11 @@ fuerza_salto = -3000
 [node name="PlataformasNormales" type="Node" parent="."]
 
 [node name="Plataforma" parent="PlataformasNormales" instance=ExtResource( 2 )]
-position = Vector2( 103.485, 1433.47 )
+position = Vector2( 402.827, 824.095 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Plataforma2" parent="PlataformasNormales" instance=ExtResource( 2 )]
-position = Vector2( 689.409, 414.736 )
+position = Vector2( 782.062, 436.118 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Plataforma3" parent="PlataformasNormales" instance=ExtResource( 2 )]
@@ -197,7 +199,7 @@ position = Vector2( 2159.66, 899.715 )
 collision_mask = 8
 
 [node name="Volon2" parent="Enemigos" instance=ExtResource( 3 )]
-position = Vector2( 434.183, 913.851 )
+position = Vector2( -2487.96, 1402.06 )
 collision_mask = 8
 
 [node name="Nubon" parent="Enemigos" instance=ExtResource( 4 )]
@@ -208,25 +210,29 @@ position = Vector2( -4.90582, 219.867 )
 [node name="Monedas" type="Node" parent="."]
 
 [node name="MonedaBroncen" parent="Monedas" instance=ExtResource( 7 )]
-position = Vector2( 1020.5, 337.307 )
+position = Vector2( 1007.23, 427.219 )
+tipo_moneda = "bronce"
 
 [node name="MonedaOro" parent="Monedas" instance=ExtResource( 8 )]
-position = Vector2( 1028.77, 444.322 )
+position = Vector2( 597.008, 502.683 )
+tipo_moneda = "oro"
 
 [node name="MonedaPlata" parent="Monedas" instance=ExtResource( 9 )]
-position = Vector2( 1029.48, 534.013 )
+position = Vector2( 940.861, 596.313 )
+tipo_moneda = "plata"
 
 [node name="PlataformaImpulsora" parent="." instance=ExtResource( 10 )]
-position = Vector2( 1039.52, 639.714 )
+position = Vector2( 601.198, 632.587 )
 
 [node name="PowerUpSalto" parent="." instance=ExtResource( 11 )]
-position = Vector2( 594.81, 554.076 )
+position = Vector2( 387.775, 720.202 )
 
 [node name="PowerUpVolar" parent="." instance=ExtResource( 12 )]
 position = Vector2( -1695.72, 1071.24 )
 
 [node name="Portal" parent="." instance=ExtResource( 14 )]
 position = Vector2( -2840.65, 1338.13 )
+proximo_nivel = "res://juego/Menus/MenuVictoria.tscn"
 
 [node name="Zanahorias" type="Node" parent="."]
 
@@ -237,4 +243,4 @@ position = Vector2( -710.608, 709.955 )
 position = Vector2( -5.88281, 569.778 )
 
 [node name="ZanahoriaLlave3" parent="Zanahorias" instance=ExtResource( 15 )]
-position = Vector2( 674.477, 303.519 )
+position = Vector2( 788.512, 346.282 )
