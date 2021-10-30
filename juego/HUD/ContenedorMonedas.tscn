@@ -4,15 +4,8 @@
 [ext_resource path="res://juego/recursos/Background/bg_layer1.png" type="Texture" id=2]
 [ext_resource path="res://juego/recursos/HUD/coin_gold.png" type="Texture" id=3]
 
-<<<<<<< HEAD
-[sub_resource type="DynamicFont" id=3]
-size = 20
-outline_size = 1
-outline_color = Color( 0.141176, 0.333333, 0.184314, 1 )
-=======
 [sub_resource type="DynamicFont" id=1]
 size = 28
->>>>>>> PcCasa
 font_data = ExtResource( 1 )
 
 [sub_resource type="Animation" id=2]
@@ -28,17 +21,6 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-<<<<<<< HEAD
-"values": [ Vector2( 0.66, 0.614 ), Vector2( 0.8, 0.7 ), Vector2( 0.66, 0.614 ) ]
-}
-
-[node name="ContenedorMonedas" type="NinePatchRect"]
-self_modulate = Color( 0.470588, 0.611765, 0.490196, 1 )
-margin_left = 1.0
-margin_top = -1.0
-margin_right = 125.0
-margin_bottom = 26.0
-=======
 "values": [ Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ) ]
 }
 
@@ -47,7 +29,6 @@ self_modulate = Color( 0.482353, 0.517647, 0.45098, 1 )
 margin_left = 1.0
 margin_right = 146.0
 margin_bottom = 35.0
->>>>>>> PcCasa
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false,
@@ -55,15 +36,6 @@ __meta__ = {
 }
 
 [node name="Cantidad" type="Label" parent="."]
-<<<<<<< HEAD
-anchor_top = 0.467
-anchor_bottom = 0.467
-margin_left = 19.0
-margin_top = -13.609
-margin_right = 53.0
-margin_bottom = 11.391
-custom_fonts/font = SubResource( 3 )
-=======
 anchor_top = 0.5
 anchor_bottom = 0.5
 margin_left = 20.2165
@@ -71,7 +43,6 @@ margin_top = -18.8108
 margin_right = 73.2165
 margin_bottom = 21.1892
 custom_fonts/font = SubResource( 1 )
->>>>>>> PcCasa
 text = "100"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -82,11 +53,7 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-<<<<<<< HEAD
-margin_left = -48.0
-=======
 margin_left = -40.0
->>>>>>> PcCasa
 margin_top = -20.0
 margin_bottom = 20.0
 __meta__ = {
@@ -94,12 +61,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="MarginContainer"]
-<<<<<<< HEAD
-position = Vector2( 14, 19 )
-scale = Vector2( 0.66, 0.614 )
-=======
 position = Vector2( 10.7029, 17.8381 )
->>>>>>> PcCasa
 texture = ExtResource( 3 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

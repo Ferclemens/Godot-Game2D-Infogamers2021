@@ -24,26 +24,18 @@ animations = [ {
 "name": "idle",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[sub_resource type="Animation" id=9]
-=======
-[sub_resource type="Animation" id=7]
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 [sub_resource type="Animation" id=4]
->>>>>>> PcCasa
 resource_name = "aclarar"
 length = 0.5
 tracks/0/type = "value"
@@ -56,22 +48,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-<<<<<<< HEAD
-"values": [ Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=10]
-=======
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=4]
-resource_name = "default"
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 [sub_resource type="Animation" id=5]
->>>>>>> PcCasa
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:visible")
 tracks/0/interp = 1
@@ -97,16 +77,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[sub_resource type="Animation" id=11]
-=======
-[sub_resource type="Animation" id=5]
-resource_name = "entrar_portal"
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 [sub_resource type="Animation" id=6]
->>>>>>> PcCasa
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:rotation_degrees")
 tracks/0/interp = 1
@@ -144,15 +115,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [sub_resource type="Animation" id=7]
-=======
-[sub_resource type="Animation" id=8]
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
-[sub_resource type="Animation" id=7]
->>>>>>> PcCasa
 resource_name = "oscurecer"
 length = 0.5
 tracks/0/type = "value"
@@ -177,21 +140,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-<<<<<<< HEAD
-"values": [ Color( 1, 1, 1, 0 ), Color( 0, 0, 0, 1 ) ]
-}
-
-[sub_resource type="Animation" id=8]
-=======
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-<<<<<<< HEAD
-[sub_resource type="Animation" id=6]
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 [sub_resource type="Animation" id=8]
->>>>>>> PcCasa
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:rotation_degrees")
@@ -303,27 +255,11 @@ one_shot = true
 [node name="EnfriamientoPowerUpVolar" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-<<<<<<< HEAD
-<<<<<<< HEAD
-anims/aclarar = SubResource( 9 )
-anims/default = SubResource( 10 )
-anims/entrar_portal = SubResource( 11 )
-anims/oscurecer = SubResource( 7 )
-anims/volar = SubResource( 8 )
-=======
-anims/aclarar = SubResource( 7 )
-anims/default = SubResource( 4 )
-anims/entrar_portal = SubResource( 5 )
-anims/oscurecer = SubResource( 8 )
-anims/volar = SubResource( 6 )
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 anims/aclarar = SubResource( 4 )
 anims/default = SubResource( 5 )
 anims/entrar_portal = SubResource( 6 )
 anims/oscurecer = SubResource( 7 )
 anims/volar = SubResource( 8 )
->>>>>>> PcCasa
 
 [node name="Tween" type="Tween" parent="."]
 
@@ -331,10 +267,6 @@ anims/volar = SubResource( 8 )
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 visible = false
-<<<<<<< HEAD
-modulate = Color( 0, 0, 0, 1 )
-=======
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )

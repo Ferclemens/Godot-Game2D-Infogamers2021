@@ -5,21 +5,23 @@ var fuerza_salto_original
 var aceleracion_caida_original
 var puede_moverse = true
 
-export var velocidad = Vector2(150.0,150.0)
-export var aceleracion_caida = 400
-export var fuerza_salto = 2200
-export var fuerza_rebote = 350
-export var impulso = -3800
-export var aceleracion_caida_power_up = 140
 onready var animacion = $AnimatedSprite
 onready var audio_salto = $audio_jump
 onready var camara = $Camera2D
 onready var enfriamiento_power_up_saltar = $EnfriamientoPowerUpSalto
 onready var enfriamiento_power_up_volar = $EnfriamientoPowerUpVolar
 onready var animacion_personaje = $AnimationPlayer
- 
-func _physics_process(delta):
+
+export var velocidad = Vector2(150.0,150.0)
+export var aceleracion_caida = 400
+export var fuerza_salto = -2200
+export var fuerza_rebote = 350
+export var impulso = -3800
+export var aceleracion_caida_power_up = 140 
+
+func _physics_process(_delta):
 	movimiento.x = velocidad.x * tomar_direccion()
+# warning-ignore:return_value_discarded
 	move_and_slide(movimiento, Vector2.UP)
 	saltar()
 	caer()
@@ -51,6 +53,7 @@ func saltar():
 		audio_salto.play()
 		animacion.play("jump")
 		movimiento.y += fuerza_salto
+# warning-ignore:return_value_discarded
 	move_and_slide(movimiento, Vector2.UP)
 
 func cambiar_fuerza_salto():
@@ -83,16 +86,10 @@ func caida_al_vacio():
 		respawn()
 
 func respawn():
-<<<<<<< HEAD
-<<<<<<< HEAD
-	DatosPlayer
-=======
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 	DatosPlayer.restar_vidas()
->>>>>>> PcCasa
 	animacion_personaje.play("oscurecer")
 	if DatosPlayer.vidas != 0:
+# warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()
 
 func impulsar():
@@ -120,11 +117,6 @@ func play_entrar_portal(posicion_portal):
 		)
 		
 	$Tween.start()
-
-
-
-
-
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "entrar_portal":

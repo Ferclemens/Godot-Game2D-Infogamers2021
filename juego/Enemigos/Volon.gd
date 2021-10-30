@@ -1,4 +1,5 @@
 extends Area2D
+
 onready var detector_jugador = $DetectorJugador
 onready var detector_pisoton = $DetectorPisoton/Colisionador
 onready var animacion = $AnimationPlayer

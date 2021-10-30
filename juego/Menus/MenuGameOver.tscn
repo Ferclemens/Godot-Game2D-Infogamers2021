@@ -58,20 +58,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[node name="BotonReintentar" parent="VBoxContainer" instance=ExtResource( 4 )]
-margin_right = 355.0
-margin_bottom = 134.0
-text = "Reintentar"
-=======
-[node name="BotonBase" parent="VBoxContainer" instance=ExtResource( 4 )]
-=======
 [node name="BotonContinuar" parent="VBoxContainer" instance=ExtResource( 4 )]
->>>>>>> PcCasa
 margin_right = 355.0
 margin_bottom = 134.0
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
 
 [node name="BotonMenuPrincipal" parent="VBoxContainer" instance=ExtResource( 4 )]
 margin_top = 138.0
@@ -136,13 +125,6 @@ position = Vector2( 227.882, 313.509 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 1 )
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-[connection signal="pressed" from="VBoxContainer/BotonReintentar" to="." method="_on_BotonReintentar_pressed"]
-=======
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 [connection signal="pressed" from="VBoxContainer/BotonContinuar" to="." method="_on_BotonContinuar_pressed"]
->>>>>>> PcCasa
 [connection signal="pressed" from="VBoxContainer/BotonMenuPrincipal" to="." method="_on_BotonMenuPrincipal_pressed"]
 [connection signal="pressed" from="VBoxContainer/BotonSalir" to="VBoxContainer/BotonSalir" method="_on_pressed"]

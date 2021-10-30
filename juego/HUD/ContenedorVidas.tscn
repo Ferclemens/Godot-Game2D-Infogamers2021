@@ -1,16 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
-<<<<<<< HEAD
-[ext_resource path="res://juego/HUD/ContenedorInformacion.tscn" type="PackedScene" id=1]
-
-[sub_resource type="Animation" id=1]
-resource_name = "animacion_vidas"
-=======
 [ext_resource path="res://juego/HUD/ContenedorGenerico.tscn" type="PackedScene" id=1]
 
 [sub_resource type="Animation" id=1]
 resource_name = "animacion_vida"
->>>>>>> PcCasa
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("TextureRect:rect_position")
@@ -19,34 +12,14 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-<<<<<<< HEAD
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 78, -30 ), Vector2( 78, -36 ), Vector2( 78, -47 ), Vector2( 78, -36 ), Vector2( 78, -30 ) ]
-=======
 "times": PoolRealArray( 0, 0.3, 0.7, 1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 83.4863, -11 ), Vector2( 83.4863, -22.8921 ), Vector2( 83.4863, -6.24316 ), Vector2( 83.486, -11 ) ]
->>>>>>> PcCasa
 }
 
 [node name="ContenedorVidas" instance=ExtResource( 1 )]
 
-<<<<<<< HEAD
-[node name="TextureRect" parent="." index="0"]
-margin_left = -71.0
-margin_top = -50.622
-margin_right = -18.9999
-margin_bottom = 20.378
-rect_rotation = -0.0668195
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
-autoplay = "animacion_vidas"
-anims/animacion_vidas = SubResource( 1 )
-=======
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
 autoplay = "animacion_vida"
 anims/animacion_vida = SubResource( 1 )
->>>>>>> PcCasa

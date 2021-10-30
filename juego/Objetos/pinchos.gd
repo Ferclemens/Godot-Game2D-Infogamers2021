@@ -1,9 +1,11 @@
 extends Area2D
 
-export var es_trampa = false
-onready var detector_personaje = $Detector
 var color_trampa = Color.brown
+
 onready var animacion = $AnimationPlayer
+onready var detector_personaje = $Detector
+
+export var es_trampa = false
 
 func _ready():
 	if es_trampa:
@@ -11,7 +13,7 @@ func _ready():
 		detector_personaje.enabled = true
 		rotation_degrees = 180
 
-func _process(delta):
+func _process(_delta):
 	if detector_personaje.is_colliding():
 		detector_personaje.set_deferred("enable", false)
 		animacion.play("caer")

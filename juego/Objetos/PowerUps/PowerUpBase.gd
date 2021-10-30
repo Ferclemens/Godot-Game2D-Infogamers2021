@@ -9,5 +9,5 @@ func _on_PowerUpBase_body_entered(body):
 	aplicar_power_up(body)
 	animacion.play("Consumir")
 
-func aplicar_power_up(body):
+func aplicar_power_up(_body):
 	pass

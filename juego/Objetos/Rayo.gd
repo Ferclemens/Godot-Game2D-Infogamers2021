@@ -1,9 +1,10 @@
 extends Area2D
 
-export var velocidad = 400
+var mi_pos = Vector2.ZERO
 
 onready var animacion = $Animacion
-var mi_pos = Vector2.ZERO
+
+export var velocidad = 400
 
 func crear(pos):
 	mi_pos = pos

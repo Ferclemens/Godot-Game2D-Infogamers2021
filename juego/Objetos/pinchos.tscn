@@ -53,7 +53,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, -20 ), Vector2( 10, -20 ), Vector2( -10, -20 ), Vector2( 0, -20 ), Vector2( 0, -250 ) ]
+"values": [ Vector2( 0, -20 ), Vector2( 10, -20 ), Vector2( -10, -20 ), Vector2( 0, -20 ), Vector2( 0, -450 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Colisionador:position")
@@ -65,7 +65,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -230 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -430 ) ]
 }
 
 [node name="pinchos" type="Area2D"]
@@ -89,6 +89,7 @@ modulate = Color( 0.741176, 0.211765, 0.211765, 1 )
 polygon = PoolVector2Array( -22.5808, -4.13785, 24.6662, -3.50789, 18.9966, -26.1865, -17.5411, -26.1865 )
 
 [node name="Detector" type="RayCast2D" parent="."]
+scale = Vector2( 1, 1.8 )
 cast_to = Vector2( 0, -200 )
 collision_mask = 4
 

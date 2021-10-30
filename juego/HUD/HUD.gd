@@ -6,8 +6,8 @@ onready var etiqueta_monedas_plata = $ContenedorMonedasPlata/Cantidad
 onready var etiqueta_monedas_bronce = $ContenedorMonedasBronce/Cantidad
 onready var etiqueta_llaves_zanahorias = $ContenedorZanahorias/Cantidad
 
-
 func _ready():
+# warning-ignore:return_value_discarded
 	DatosPlayer.connect("actualizar_datos",self,"actualizar_hud")
 	actualizar_hud()
 

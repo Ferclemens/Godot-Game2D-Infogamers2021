@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 [gd_scene load_steps=23 format=2]
-=======
-[gd_scene load_steps=22 format=2]
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
-[gd_scene load_steps=23 format=2]
->>>>>>> PcCasa
 
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=2]
@@ -29,14 +21,7 @@
 [ext_resource path="res://juego/recursos/Background/bg_layer3.png" type="Texture" id=19]
 [ext_resource path="res://juego/recursos/Background/bg_layer4.png" type="Texture" id=20]
 [ext_resource path="res://juego/Menus/MenuPausa.tscn" type="PackedScene" id=21]
-<<<<<<< HEAD
-<<<<<<< HEAD
 [ext_resource path="res://juego/HUD/HUD.tscn" type="PackedScene" id=22]
-=======
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
-[ext_resource path="res://juego/HUD/HUD.tscn" type="PackedScene" id=22]
->>>>>>> PcCasa
 
 [node name="Nivel1" type="Node"]
 script = ExtResource( 16 )
@@ -44,16 +29,8 @@ nivel_actual = "res://juego/Niveles/Nivel1.tscn"
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 [node name="HUD" parent="CapaFrente" instance=ExtResource( 22 )]
 
-=======
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
-[node name="HUD" parent="CapaFrente" instance=ExtResource( 22 )]
-
->>>>>>> PcCasa
 [node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 21 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -101,24 +78,10 @@ modulate = Color( 0.803922, 0.917647, 0.772549, 1 )
 motion_mirroring = Vector2( 2048, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesCercanas"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-margin_left = 0.289276
-margin_top = 3.90101
-margin_right = 2048.29
-margin_bottom = 2051.9
-=======
-margin_left = 28.6055
-margin_top = 22.7785
-margin_right = 2076.61
-margin_bottom = 2070.78
->>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
-=======
 margin_left = -4.48985
 margin_top = -2.24493
 margin_right = 2043.51
 margin_bottom = 2045.76
->>>>>>> PcCasa
 texture = ExtResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -268,16 +231,16 @@ position = Vector2( 387.775, 720.202 )
 position = Vector2( -1695.72, 1071.24 )
 
 [node name="Portal" parent="." instance=ExtResource( 14 )]
-position = Vector2( -2840.65, 1338.13 )
-proximo_nivel = "res://juego/Menus/MenuVictoria.tscn"
+position = Vector2( -224.364, 526.547 )
+proximo_nivel = "res://juego/Niveles/Nivel2_v2.tscn"
 
 [node name="Zanahorias" type="Node" parent="."]
 
 [node name="ZanahoriaLlave1" parent="Zanahorias" instance=ExtResource( 15 )]
-position = Vector2( -710.608, 709.955 )
+position = Vector2( -99.6677, 574.19 )
 
 [node name="ZanahoriaLlave2" parent="Zanahorias" instance=ExtResource( 15 )]
 position = Vector2( -5.88281, 569.778 )
 
 [node name="ZanahoriaLlave3" parent="Zanahorias" instance=ExtResource( 15 )]
-position = Vector2( 788.512, 346.282 )
+position = Vector2( 92.7189, 581.042 )
