@@ -84,11 +84,16 @@ func caida_al_vacio():
 
 func respawn():
 <<<<<<< HEAD
+<<<<<<< HEAD
 	DatosPlayer
 =======
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+	DatosPlayer.restar_vidas()
+>>>>>>> PcCasa
 	animacion_personaje.play("oscurecer")
-	get_tree().reload_current_scene()
+	if DatosPlayer.vidas != 0:
+		get_tree().reload_current_scene()
 
 func impulsar():
 	movimiento.y = impulso

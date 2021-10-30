@@ -36,10 +36,14 @@ animations = [ {
 } ]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=9]
 =======
 [sub_resource type="Animation" id=7]
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+[sub_resource type="Animation" id=4]
+>>>>>>> PcCasa
 resource_name = "aclarar"
 length = 0.5
 tracks/0/type = "value"
@@ -61,9 +65,13 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=4]
 resource_name = "default"
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+[sub_resource type="Animation" id=5]
+>>>>>>> PcCasa
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:visible")
 tracks/0/interp = 1
@@ -90,11 +98,15 @@ tracks/1/keys = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=11]
 =======
 [sub_resource type="Animation" id=5]
 resource_name = "entrar_portal"
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+[sub_resource type="Animation" id=6]
+>>>>>>> PcCasa
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimatedSprite:rotation_degrees")
 tracks/0/interp = 1
@@ -133,10 +145,14 @@ tracks/2/keys = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="Animation" id=7]
 =======
 [sub_resource type="Animation" id=8]
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+[sub_resource type="Animation" id=7]
+>>>>>>> PcCasa
 resource_name = "oscurecer"
 length = 0.5
 tracks/0/type = "value"
@@ -170,8 +186,12 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+<<<<<<< HEAD
 [sub_resource type="Animation" id=6]
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+[sub_resource type="Animation" id=8]
+>>>>>>> PcCasa
 length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("wing_left:rotation_degrees")
@@ -284,6 +304,7 @@ one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 <<<<<<< HEAD
+<<<<<<< HEAD
 anims/aclarar = SubResource( 9 )
 anims/default = SubResource( 10 )
 anims/entrar_portal = SubResource( 11 )
@@ -296,6 +317,13 @@ anims/entrar_portal = SubResource( 5 )
 anims/oscurecer = SubResource( 8 )
 anims/volar = SubResource( 6 )
 >>>>>>> 8204c158fa8536a2657b0d341ed0e09fe777f295
+=======
+anims/aclarar = SubResource( 4 )
+anims/default = SubResource( 5 )
+anims/entrar_portal = SubResource( 6 )
+anims/oscurecer = SubResource( 7 )
+anims/volar = SubResource( 8 )
+>>>>>>> PcCasa
 
 [node name="Tween" type="Tween" parent="."]
 
