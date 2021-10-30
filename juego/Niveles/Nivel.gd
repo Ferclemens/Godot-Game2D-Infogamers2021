@@ -1,6 +1,6 @@
 extends Node
 signal abrir_portal()
-
+#COMENTARIO DE PRUEBA PARA GITHUB
 var numero_llaves = 0
 var contenedor_llaves
 export var ruta_game_over = "res://juego/Menus/MenuGameOver.tscn"
