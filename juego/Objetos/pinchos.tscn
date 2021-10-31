@@ -86,7 +86,7 @@ texture = ExtResource( 1 )
 
 [node name="Colisionador" type="CollisionPolygon2D" parent="."]
 modulate = Color( 0.741176, 0.211765, 0.211765, 1 )
-polygon = PoolVector2Array( -22.5808, -4.13785, 24.6662, -3.50789, 18.9966, -26.1865, -17.5411, -26.1865 )
+polygon = PoolVector2Array( -17.9173, -4.54016, 19.84, -4.24286, 15.3805, -25.054, -13.4578, -25.3513 )
 
 [node name="Detector" type="RayCast2D" parent="."]
 scale = Vector2( 1, 2 )

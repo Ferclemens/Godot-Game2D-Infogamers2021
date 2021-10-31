@@ -5,7 +5,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "reload_audio_general"
-length = 242.0
+length = 241.911
 loop = true
 tracks/0/type = "audio"
 tracks/0/path = NodePath("AudioStreamPlayer")
@@ -19,7 +19,7 @@ tracks/0/keys = {
 "start_offset": 0.0,
 "stream": ExtResource( 1 )
 } ],
-"times": PoolRealArray( 0.2 )
+"times": PoolRealArray( 0 )
 }
 
 [node name="AudioGeneral" type="Node"]

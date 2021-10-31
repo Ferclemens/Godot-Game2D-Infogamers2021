@@ -2,7 +2,7 @@
 
 [ext_resource path="res://juego/Menus/MenuPausa.tscn" type="PackedScene" id=1]
 [ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=2]
-[ext_resource path="res://juego/Objetos/PowerUps/PlataformaTrampa.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/Plataforma/PlataformaTrampa.tscn" type="PackedScene" id=3]
 [ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=4]
 [ext_resource path="res://juego/Enemigos/Volon.tscn" type="PackedScene" id=5]
 [ext_resource path="res://juego/Objetos/MonedaBroncen.tscn" type="PackedScene" id=6]
@@ -25,7 +25,7 @@
 
 [node name="Nivel6_v2" type="Node"]
 script = ExtResource( 18 )
-nivel_actual = "res://juego/Niveles/Nivel4_v2.tscn"
+nivel_actual = "res://juego/Niveles/Nivel6_v2.tscn"
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
@@ -88,7 +88,7 @@ __meta__ = {
 }
 
 [node name="PersonajePrincipal" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3089.34, 1283.23 )
+position = Vector2( 738.442, 1815.69 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 27
@@ -201,11 +201,11 @@ position = Vector2( 3099.08, 279.67 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen5" parent="Monedas" instance=ExtResource( 6 )]
-position = Vector2( 2941.93, 1090.09 )
+position = Vector2( 2949.48, 1095.75 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen6" parent="Monedas" instance=ExtResource( 6 )]
-position = Vector2( 2973.36, 1007.03 )
+position = Vector2( 2977.14, 1003.25 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen7" parent="Monedas" instance=ExtResource( 6 )]
@@ -221,11 +221,11 @@ position = Vector2( 3085.61, 829.676 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen8" parent="Monedas" instance=ExtResource( 6 )]
-position = Vector2( 1146.92, 867.17 )
+position = Vector2( 1275.77, 1196.8 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen13" parent="Monedas" instance=ExtResource( 6 )]
-position = Vector2( 1264.98, 1078.86 )
+position = Vector2( 1264.98, 1099.84 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen14" parent="Monedas" instance=ExtResource( 6 )]
@@ -257,7 +257,7 @@ position = Vector2( 3316.93, 1344.18 )
 tipo_moneda = "oro"
 
 [node name="MonedaOro7" parent="Monedas" instance=ExtResource( 7 )]
-position = Vector2( 997.922, 1348.67 )
+position = Vector2( 1276.61, 1294.73 )
 tipo_moneda = "oro"
 
 [node name="MonedaOro4" parent="Monedas" instance=ExtResource( 7 )]
@@ -321,7 +321,7 @@ position = Vector2( 1990.5, 366.247 )
 tipo_moneda = "plata"
 
 [node name="MonedaPlata14" parent="Monedas" instance=ExtResource( 11 )]
-position = Vector2( 3117.45, 972.376 )
+position = Vector2( 2946.86, 1209.66 )
 tipo_moneda = "plata"
 
 [node name="MonedaPlata16" parent="Monedas" instance=ExtResource( 11 )]
@@ -403,15 +403,14 @@ position = Vector2( 3419.19, 1315.78 )
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 2115.29, -19.3975 )
-proximo_nivel = "res://juego/Menus/MenuVictoria.tscn"
 
 [node name="Zanahorias" type="Node" parent="."]
 
 [node name="ZanahoriaLlave1" parent="Zanahorias" instance=ExtResource( 16 )]
-position = Vector2( 2132.03, 1224.81 )
+position = Vector2( 2131.1, 1214.33 )
 
 [node name="ZanahoriaLlave2" parent="Zanahorias" instance=ExtResource( 16 )]
-position = Vector2( 988.255, 1277 )
+position = Vector2( 1149.86, 969.526 )
 
 [node name="ZanahoriaLlave3" parent="Zanahorias" instance=ExtResource( 16 )]
-position = Vector2( 3315.77, 1271.24 )
+position = Vector2( 3106.5, 943.048 )

@@ -7,6 +7,7 @@ var puede_moverse = true
 
 onready var animacion = $AnimatedSprite
 onready var audio_salto = $audio_jump
+onready var audio_danio = $audio_danio
 onready var camara = $Camera2D
 onready var enfriamiento_power_up_saltar = $EnfriamientoPowerUpSalto
 onready var enfriamiento_power_up_volar = $EnfriamientoPowerUpVolar
@@ -86,8 +87,12 @@ func caida_al_vacio():
 		respawn()
 
 func respawn():
+	audio_danio.play()
+	puede_moverse = false
 	DatosPlayer.restar_vidas()
 	animacion_personaje.play("oscurecer")
+	#yield(get_node(animacion_personaje.play("danio")), "finished")
+	#yield(get_tree().create_timer(0.2),"timeout")
 	if DatosPlayer.vidas != 0:
 # warning-ignore:return_value_discarded
 		get_tree().reload_current_scene()
@@ -105,7 +110,7 @@ func _on_EnfriamientoPowerUpVolar_timeout():
 
 func play_entrar_portal(posicion_portal):
 	puede_moverse = false
-	$AnimationPlayer.play("entrar_portal")
+	animacion_personaje.play("entrar_portal")
 	$Tween.interpolate_property(
 		self,
 		"global_position",

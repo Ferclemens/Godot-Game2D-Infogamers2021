@@ -10,7 +10,7 @@
 [ext_resource path="res://juego/Objetos/MonedaBroncen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://juego/Objetos/PowerUps/PowerUpSalto.tscn" type="PackedScene" id=9]
 [ext_resource path="res://juego/Objetos/pinchos.tscn" type="PackedScene" id=10]
-[ext_resource path="res://juego/Objetos/PowerUps/PlataformaTrampa.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/Plataforma/PlataformaTrampa.tscn" type="PackedScene" id=11]
 [ext_resource path="res://juego/Objetos/MonedaOro.tscn" type="PackedScene" id=12]
 [ext_resource path="res://juego/Objetos/ZanahoriaLlave.tscn" type="PackedScene" id=13]
 [ext_resource path="res://juego/Enemigos/Nubon.tscn" type="PackedScene" id=14]
@@ -117,6 +117,10 @@ scale = Vector2( 0.5, 0.5 )
 position = Vector2( 3099.77, 431.553 )
 scale = Vector2( 0.5, 0.5 )
 
+[node name="Plataforma6" parent="PlataformasNormales" instance=ExtResource( 15 )]
+position = Vector2( 2543.85, 424.426 )
+scale = Vector2( 0.5, 0.5 )
+
 [node name="Plataforma4" parent="PlataformasNormales" instance=ExtResource( 15 )]
 position = Vector2( 140.353, 1967 )
 scale = Vector2( 0.5, 0.5 )
@@ -167,10 +171,6 @@ scale = Vector2( 0.2, 0.5 )
 
 [node name="Plataforma3" parent="PlataformasChicas" instance=ExtResource( 15 )]
 position = Vector2( 2136.9, 644.858 )
-scale = Vector2( 0.2, 0.5 )
-
-[node name="Plataforma4" parent="PlataformasChicas" instance=ExtResource( 15 )]
-position = Vector2( 2526.14, 421.174 )
 scale = Vector2( 0.2, 0.5 )
 
 [node name="Enemigos" type="Node" parent="."]

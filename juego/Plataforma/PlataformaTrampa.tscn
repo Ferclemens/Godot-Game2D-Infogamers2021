@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://juego/recursos/Environment/ground_grass_broken.png" type="Texture" id=1]
-[ext_resource path="res://juego/Objetos/PowerUps/PlataformaTrampa.gd" type="Script" id=2]
+[ext_resource path="res://juego/Plataforma/PlataformaTrampa.gd" type="Script" id=2]
 [ext_resource path="res://juego/recursos/Sfx/Suelotrampa.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
