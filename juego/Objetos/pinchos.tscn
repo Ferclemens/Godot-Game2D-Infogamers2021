@@ -89,7 +89,7 @@ modulate = Color( 0.741176, 0.211765, 0.211765, 1 )
 polygon = PoolVector2Array( -22.5808, -4.13785, 24.6662, -3.50789, 18.9966, -26.1865, -17.5411, -26.1865 )
 
 [node name="Detector" type="RayCast2D" parent="."]
-scale = Vector2( 1, 1.8 )
+scale = Vector2( 1, 2 )
 cast_to = Vector2( 0, -200 )
 collision_mask = 4
 

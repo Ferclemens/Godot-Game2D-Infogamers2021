@@ -28,7 +28,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
-nivel_actual = "res://juego/Niveles/Nivel1.tscn"
+nivel_actual = "res://juego/Niveles/Nivel3_v2.tscn"
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
@@ -91,7 +91,7 @@ __meta__ = {
 }
 
 [node name="PersonajePrincipal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3085.49, 748.101 )
+position = Vector2( 106.856, 1808.9 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 27

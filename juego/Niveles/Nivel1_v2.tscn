@@ -23,7 +23,7 @@
 
 [node name="Nivel1_v2" type="Node"]
 script = ExtResource( 37 )
-nivel_actual = "res://juego/Niveles/Nivel1.tscn"
+nivel_actual = "res://juego/Niveles/Nivel1_v2.tscn"
 
 [node name="CapaFrente" type="CanvasLayer" parent="."]
 
@@ -86,7 +86,7 @@ __meta__ = {
 }
 
 [node name="PersonajePrincipal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2291.46, 1523.11 )
+position = Vector2( 113.204, 1245.53 )
 scale = Vector2( 0.5, 0.5 )
 collision_layer = 4
 collision_mask = 27
@@ -147,7 +147,7 @@ position = Vector2( 4333.58, 1137.8 )
 scale = Vector2( 1.5, 0.5 )
 
 [node name="Plataforma5" parent="PlataformasGrandes" instance=ExtResource( 4 )]
-position = Vector2( 3296.7, 1525.29 )
+position = Vector2( 3312.7, 1525.29 )
 scale = Vector2( 1.5, 0.5 )
 
 [node name="Plataforma6" parent="PlataformasGrandes" instance=ExtResource( 4 )]
@@ -177,14 +177,14 @@ position = Vector2( 2944.52, 1577.78 )
 scale = Vector2( 0.2, 0.5 )
 
 [node name="Plataforma5" parent="PlataformasChicas" instance=ExtResource( 4 )]
-position = Vector2( 3306.17, 1452.72 )
+position = Vector2( 3322.17, 1452.72 )
 rotation = 0.244346
 scale = Vector2( 0.2, 1.2 )
 
 [node name="Enemigos" type="Node" parent="."]
 
 [node name="pinchos" parent="Enemigos" instance=ExtResource( 7 )]
-position = Vector2( 3393.78, 1506.74 )
+position = Vector2( 3409.78, 1506.74 )
 es_trampa = false
 
 [node name="pinchos3" parent="Enemigos" instance=ExtResource( 7 )]
@@ -325,7 +325,7 @@ position = Vector2( 6003.93, 899.392 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen13" parent="Monedas" instance=ExtResource( 11 )]
-position = Vector2( 3494.44, 1431.46 )
+position = Vector2( 3510.44, 1431.46 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen14" parent="Monedas" instance=ExtResource( 11 )]
@@ -357,7 +357,7 @@ position = Vector2( 2013.96, 1274.73 )
 tipo_moneda = "plata"
 
 [node name="PlataformaImpulsora" parent="." instance=ExtResource( 16 )]
-position = Vector2( 3495.9, 1503.29 )
+position = Vector2( 3511.9, 1503.29 )
 
 [node name="PowerUpSalto" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1446.58, 1101.19 )

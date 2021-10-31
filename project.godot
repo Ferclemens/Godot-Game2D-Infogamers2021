@@ -11,12 +11,13 @@ config_version=4
 [application]
 
 config/name="Game"
-run/main_scene="res://juego/Niveles/Nivel1.tscn"
+run/main_scene="res://juego/Menus/MenuPrincipal.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 DatosPlayer="*res://juego/autoload/datosPlayer.gd"
+AudioGeneral="*res://juego/autoload/AudioGeneral.tscn"
 
 [display]
 

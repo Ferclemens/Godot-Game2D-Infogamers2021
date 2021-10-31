@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/outstep.ogg-169dd6b75ce050f3987e510f24e99bfb.oggstr"
+
+[deps]
+
+source_file="res://juego/recursos/Sfx/outstep.ogg"
+dest_files=[ "res://.import/outstep.ogg-169dd6b75ce050f3987e510f24e99bfb.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
