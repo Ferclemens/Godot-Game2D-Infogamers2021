@@ -14,7 +14,7 @@ onready var animacion_personaje = $AnimationPlayer
 
 export var velocidad = Vector2(150.0,150.0)
 export var aceleracion_caida = 400
-export var fuerza_salto = -2200
+export var fuerza_salto = -2400
 export var fuerza_rebote = 350
 export var impulso = -3800
 export var aceleracion_caida_power_up = 140 

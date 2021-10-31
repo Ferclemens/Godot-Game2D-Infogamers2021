@@ -236,11 +236,11 @@ collision_mask = 8
 [node name="Monedas" type="Node" parent="."]
 
 [node name="MonedaBroncen" parent="Monedas" instance=ExtResource( 4 )]
-position = Vector2( 1494.24, 1407.2 )
+position = Vector2( 3809.83, 927.894 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen3" parent="Monedas" instance=ExtResource( 4 )]
-position = Vector2( 1486.84, 1298.31 )
+position = Vector2( 3760.9, 929.006 )
 tipo_moneda = "bronce"
 
 [node name="MonedaBroncen2" parent="Monedas" instance=ExtResource( 4 )]
@@ -276,7 +276,7 @@ position = Vector2( 2974.44, 818.583 )
 tipo_moneda = "bronce"
 
 [node name="MonedaOro" parent="Monedas" instance=ExtResource( 7 )]
-position = Vector2( 1636.48, 1359.52 )
+position = Vector2( 2350.48, 1233.52 )
 tipo_moneda = "oro"
 
 [node name="MonedaOro4" parent="Monedas" instance=ExtResource( 7 )]
@@ -292,7 +292,7 @@ position = Vector2( 2816.92, 745.073 )
 tipo_moneda = "oro"
 
 [node name="MonedaOro3" parent="Monedas" instance=ExtResource( 7 )]
-position = Vector2( 3863.62, 879.855 )
+position = Vector2( 3892.2, 806.896 )
 tipo_moneda = "oro"
 
 [node name="MonedaOro6" parent="Monedas" instance=ExtResource( 7 )]
@@ -320,11 +320,11 @@ position = Vector2( 2913.19, 730.274 )
 tipo_moneda = "plata"
 
 [node name="MonedaPlata5" parent="Monedas" instance=ExtResource( 9 )]
-position = Vector2( 1490.37, 1351.77 )
+position = Vector2( 3821.27, 878.077 )
 tipo_moneda = "plata"
 
 [node name="MonedaPlata2" parent="Monedas" instance=ExtResource( 9 )]
-position = Vector2( 1498.23, 1461.62 )
+position = Vector2( 3842.96, 831.803 )
 tipo_moneda = "plata"
 
 [node name="MonedaBroncen9" parent="Monedas" instance=ExtResource( 4 )]

@@ -1,0 +1,417 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://juego/Menus/MenuPausa.tscn" type="PackedScene" id=1]
+[ext_resource path="res://juego/Personaje/PersonajePrincipal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://juego/Objetos/PowerUps/PlataformaTrampa.tscn" type="PackedScene" id=3]
+[ext_resource path="res://juego/Plataforma/Plataforma.tscn" type="PackedScene" id=4]
+[ext_resource path="res://juego/Enemigos/Volon.tscn" type="PackedScene" id=5]
+[ext_resource path="res://juego/Objetos/MonedaBroncen.tscn" type="PackedScene" id=6]
+[ext_resource path="res://juego/Objetos/MonedaOro.tscn" type="PackedScene" id=7]
+[ext_resource path="res://juego/HUD/HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://juego/Objetos/pinchos.tscn" type="PackedScene" id=9]
+[ext_resource path="res://juego/Enemigos/Pinchon.tscn" type="PackedScene" id=10]
+[ext_resource path="res://juego/Objetos/MonedaPlata.tscn" type="PackedScene" id=11]
+[ext_resource path="res://juego/Objetos/PowerUps/PowerUpSalto.tscn" type="PackedScene" id=12]
+[ext_resource path="res://juego/Objetos/PowerUps/PowerUpVolar.tscn" type="PackedScene" id=13]
+[ext_resource path="res://juego/Enemigos/Nubon.tscn" type="PackedScene" id=14]
+[ext_resource path="res://juego/Objetos/Portal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://juego/Objetos/ZanahoriaLlave.tscn" type="PackedScene" id=16]
+[ext_resource path="res://juego/Plataforma/PlataformaImpulsora.tscn" type="PackedScene" id=17]
+[ext_resource path="res://juego/Niveles/Nivel.gd" type="Script" id=18]
+[ext_resource path="res://juego/recursos/Background/bg_layer1.png" type="Texture" id=19]
+[ext_resource path="res://juego/recursos/Background/bg_layer3.png" type="Texture" id=20]
+[ext_resource path="res://juego/recursos/Background/bg_layer2.png" type="Texture" id=21]
+[ext_resource path="res://juego/recursos/Background/bg_layer4.png" type="Texture" id=22]
+
+[node name="Nivel6_v2" type="Node"]
+script = ExtResource( 18 )
+nivel_actual = "res://juego/Niveles/Nivel4_v2.tscn"
+
+[node name="CapaFrente" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="CapaFrente" instance=ExtResource( 8 )]
+
+[node name="MenuPausa" parent="CapaFrente" instance=ExtResource( 1 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxFondo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 2048, 2048 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxFondo"]
+self_modulate = Color( 0.537255, 0.721569, 0.8, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubes" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubes"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesMedias" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.776471, 0.901961, 0.72549, 1 )
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesMedias"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxNubesCercanas" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.803922, 0.917647, 0.772549, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxNubesCercanas"]
+margin_left = -4.48985
+margin_top = -2.24493
+margin_right = 2043.51
+margin_bottom = 2045.76
+texture = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PersonajePrincipal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3089.34, 1283.23 )
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 4
+collision_mask = 27
+velocidad = Vector2( 150, 500 )
+aceleracion_caida = 300
+fuerza_salto = -3000
+
+[node name="PlataformasNormales" type="Node" parent="."]
+
+[node name="PlataformaTrampa" parent="PlataformasNormales" instance=ExtResource( 3 )]
+position = Vector2( 692.903, 1415.51 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Plataforma" parent="PlataformasNormales" instance=ExtResource( 4 )]
+position = Vector2( 1746.06, 349.655 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Plataforma2" parent="PlataformasNormales" instance=ExtResource( 4 )]
+position = Vector2( 2121.25, 107.005 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Plataforma3" parent="PlataformasNormales" instance=ExtResource( 4 )]
+position = Vector2( 2479.91, 344.013 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="PlataformasGrandes" type="Node" parent="."]
+
+[node name="Plataforma" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 2140.16, 1429.7 )
+scale = Vector2( 1.5, 0.5 )
+
+[node name="Plataforma2" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 3159.15, 1417.75 )
+scale = Vector2( 1.5, 0.5 )
+
+[node name="Plataforma3" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 3297.7, 332.952 )
+scale = Vector2( 1.5, 0.5 )
+
+[node name="Plataforma4" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 1632.9, 783.069 )
+scale = Vector2( 1.5, 0.5 )
+
+[node name="Plataforma5" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 2601.91, 773.023 )
+scale = Vector2( 1.5, 0.5 )
+
+[node name="Plataforma6" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 1211.72, 1415.89 )
+scale = Vector2( 1.5, 0.5 )
+
+[node name="Plataforma Larga" parent="PlataformasGrandes" instance=ExtResource( 4 )]
+position = Vector2( 2051.15, 1933.75 )
+scale = Vector2( 8, 0.7 )
+
+[node name="PlataformasChicas" type="Node" parent="."]
+
+[node name="Plataforma" parent="PlataformasChicas" instance=ExtResource( 4 )]
+position = Vector2( 3119.88, 1077.91 )
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Plataforma2" parent="PlataformasChicas" instance=ExtResource( 4 )]
+position = Vector2( 1144.53, 1084.16 )
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Plataforma3" parent="PlataformasChicas" instance=ExtResource( 4 )]
+position = Vector2( 2243.41, 422.925 )
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Plataforma4" parent="PlataformasChicas" instance=ExtResource( 4 )]
+position = Vector2( 1996.19, 431.007 )
+scale = Vector2( 0.2, 0.5 )
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="pinchos3" parent="Enemigos" instance=ExtResource( 9 )]
+position = Vector2( 2132.17, 1410.04 )
+es_trampa = false
+
+[node name="Pinchon" parent="Enemigos" instance=ExtResource( 10 )]
+position = Vector2( 3007.35, 1892.31 )
+
+[node name="Pinchon3" parent="Enemigos" instance=ExtResource( 10 )]
+position = Vector2( 2068.98, 1890.07 )
+
+[node name="Pinchon2" parent="Enemigos" instance=ExtResource( 10 )]
+position = Vector2( 1246.26, 1892.05 )
+
+[node name="Volon" parent="Enemigos" instance=ExtResource( 5 )]
+position = Vector2( 3629.91, 1131.93 )
+collision_mask = 8
+
+[node name="Volon2" parent="Enemigos" instance=ExtResource( 5 )]
+position = Vector2( 3767.73, 662.495 )
+collision_mask = 8
+
+[node name="Nubon2" parent="Enemigos" instance=ExtResource( 14 )]
+position = Vector2( 1818.01, 888.55 )
+
+[node name="RayosLanzados" type="Node" parent="."]
+
+[node name="Monedas" type="Node" parent="."]
+
+[node name="MonedaBroncen" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 2901.09, 1747.87 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen2" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 3099.08, 279.67 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen5" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 2941.93, 1090.09 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen6" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 2973.36, 1007.03 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen7" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 3058.67, 753.349 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen11" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 3002.55, 694.981 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen12" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 3085.61, 829.676 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen8" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 1146.92, 867.17 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen13" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 1264.98, 1078.86 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen14" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 1249.26, 1004.78 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen9" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 1159.47, 791.512 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen10" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 1215.33, 725.739 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen3" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 3535.08, 271.67 )
+tipo_moneda = "bronce"
+
+[node name="MonedaBroncen4" parent="Monedas" instance=ExtResource( 6 )]
+position = Vector2( 3153.08, 279.67 )
+tipo_moneda = "bronce"
+
+[node name="MonedaOro" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 2131.61, 1281.32 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro8" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 3316.93, 1344.18 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro7" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 997.922, 1348.67 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro4" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 619.59, 1357.13 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro2" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 3319.68, 183.85 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro5" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 3264.24, 269.254 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro3" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 3315.18, 235.857 )
+tipo_moneda = "oro"
+
+[node name="MonedaOro6" parent="Monedas" instance=ExtResource( 7 )]
+position = Vector2( 3364.63, 268.82 )
+tipo_moneda = "oro"
+
+[node name="MonedaPlata" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 672.035, 1357.46 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata9" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 722.904, 1356.63 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata10" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 770.958, 1357.96 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata2" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3272.47, 218.671 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata3" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 1807.76, 247.577 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata4" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3473.97, 271.145 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata5" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 2421.52, 274.205 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata12" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 2349.68, 676.046 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata18" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 2237.44, 357.267 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata19" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 1990.5, 366.247 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata14" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3117.45, 972.376 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata16" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 1285.59, 691.76 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata17" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 2935.61, 658.086 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata15" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 2949.08, 1311.36 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata13" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 1873.76, 678.291 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata6" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3407.97, 271.145 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata7" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3208.47, 273.145 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata8" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3362.47, 217.674 )
+tipo_moneda = "plata"
+
+[node name="MonedaPlata11" parent="Monedas" instance=ExtResource( 11 )]
+position = Vector2( 3319.02, 276.108 )
+tipo_moneda = "plata"
+
+[node name="PlataformaImpulsora" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2813.95, 1896.51 )
+
+[node name="PlataformaImpulsora3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2952.04, 1392.98 )
+
+[node name="PlataformaImpulsora5" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1273.14, 1396.42 )
+
+[node name="PlataformaImpulsora12" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1146.78, 1063.15 )
+
+[node name="PlataformaImpulsora13" parent="." instance=ExtResource( 17 )]
+position = Vector2( 3118.28, 1057.41 )
+
+[node name="PlataformaImpulsora6" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1884.88, 755.163 )
+
+[node name="PlataformaImpulsora9" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1806, 326.107 )
+
+[node name="PlataformaImpulsora7" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2352.15, 742.772 )
+
+[node name="PlataformaImpulsora8" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2421.06, 325.617 )
+
+[node name="PlataformaImpulsora2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1543.26, 1896.26 )
+
+[node name="PlataformaImpulsora10" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1796.28, 1903.58 )
+
+[node name="PlataformaImpulsora11" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2477.15, 1900.75 )
+
+[node name="PowerUpSalto" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2768.48, 677.917 )
+
+[node name="PowerUpSalto2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1408.05, 691.386 )
+
+[node name="PowerUpVolar" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3419.19, 1315.78 )
+
+[node name="Portal" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2115.29, -19.3975 )
+proximo_nivel = "res://juego/Menus/MenuVictoria.tscn"
+
+[node name="Zanahorias" type="Node" parent="."]
+
+[node name="ZanahoriaLlave1" parent="Zanahorias" instance=ExtResource( 16 )]
+position = Vector2( 2132.03, 1224.81 )
+
+[node name="ZanahoriaLlave2" parent="Zanahorias" instance=ExtResource( 16 )]
+position = Vector2( 988.255, 1277 )
+
+[node name="ZanahoriaLlave3" parent="Zanahorias" instance=ExtResource( 16 )]
+position = Vector2( 3315.77, 1271.24 )
